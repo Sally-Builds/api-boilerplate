@@ -1,13 +1,10 @@
-import { NextFunction, Request, Response, Router } from "express";
-import BadRequestError from "../../errors/BadRequestError";
+import { Router } from "express";
+import { testController } from "./user.controller";
 
 
 const router = Router();
 
-
-router.get('/', (_, res: Response, next: NextFunction) => {
-    throw new BadRequestError('This is a bad request Error')
-    res.status(200).json({ data: "Success" })
-})
+router.get('/', testController)
 
 export default router
+

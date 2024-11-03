@@ -27,12 +27,6 @@ class DB {
         mongoose.connection.once('disconnected', () => {
             log.error(`Successfully disconnected from ${dbUrl}`);
         });
-        // process.on('SIGINT', () => {
-        //   mongoose.connection.close().then(() => {
-        //     log.error('dBase connection closed due to app termination');
-        //     process.exit(0);
-        //   });
-        // });
     }
 }
 
