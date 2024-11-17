@@ -1,11 +1,11 @@
-import config from 'config'
 import 'express-async-errors'
 import App from "./app";
 import mongoose from 'mongoose';
 import DB from './utils/db';
+import config from './config/default'
 
 
-const PORT = config.get<number>('port');
+const PORT = config.port;
 
 process.on("uncaughtException", (err: Error) => {
     console.log("UNCAUGHT EXCEPTION! 💥 Shutting down...");

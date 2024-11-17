@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import config from 'config'
+import config from '../config/default'
 
 dotenv.config();
 
-const dbUrl = config.get<string>('dbUrl')
+const dbUrl = config.dbUrl
 
 const options = {
     serverSelectionTimeoutMS: 60000,
